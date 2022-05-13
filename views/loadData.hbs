@@ -1,0 +1,11 @@
+<h1>List of Patients</h1>
+<div>
+    {{# each items}}
+    <article class="item">
+        <div>Name: {{ this.Name }}</div>
+        <div>Sickness: {{ this.Sickness }}</div>
+        <div>Doctor: {{ this.Doctor }}</div>
+        <div>ID: {{this._id}}</div>
+    </article>
+    {{/each}}
+</div>

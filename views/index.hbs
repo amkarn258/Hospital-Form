@@ -1,0 +1,52 @@
+<h1>Patient Data</h1>
+<section class="insert">
+    <h3>Insert Data</h3>
+    <form action="/insert" method="input">
+        <div class="input">
+            <label for="name">Name</label>
+            <input type="text" id="Name" name="Name">
+        </div>
+        <div class="input">
+            <label for="sickness">Sickness</label>
+            <input type="text" id="Sickness" name="Sickness">
+        </div>
+        <div class="input">
+            <label for="doctor">His/Her Doctor</label>
+            <div>
+            <select>
+                {{# each items}}
+                <option value="{{status}}" hidden="hidden" selected="selected">{{status}}</option>
+                <option value="{{ this.doctName }}"> {{this.doctName}} </option>
+                {{/each}}
+            </select>
+            </div>
+        </div>
+        <button type="submit">INSERT</button>
+    </form>
+</section>
+<section class="get">
+    <h3>Get Data</h3>
+    <a href="loadData.hbs">LOAD DATA</a>
+</section>
+<section class="update">
+    <h3>Update Data</h3>
+    <form action="/update" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <div class="input">
+            <label for="title">Name</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="input">
+            <label for="content">Sickness</label>
+            <input type="text" id="sickness" name="sickness">
+        </div>
+        <div class="input">
+            <label for="author">His/Her Doctor</label>
+            <input type="text" id="doctor" name="doctor">
+        </div>
+        <button type="submit">UPDATE</button>
+    </form>
+</section>
