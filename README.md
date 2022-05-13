@@ -1,3 +1,5 @@
 # Hospital-Form
 
-To run, run the following from inside the main directory- node index.js
+To run, Download the repository from the master branch. 
+
+Run the following from inside the main directory- node index.js
